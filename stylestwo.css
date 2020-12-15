@@ -65,12 +65,12 @@ p {
 }
 
 @media (max-width: 805px) {
-  .nav-main {
+  .main-nav {
     flex-direction: column;
     width: 100%;
     border-radius: 3px;
   }
-  .branding {
+  .main-branding {
     margin: 5px;
   }
   .main-menu {
@@ -192,12 +192,12 @@ p {
     align-items: center;
     padding: 10px;
   }
-  .article:nth-child(3) {
+  .article--three {
     grid-column: 1 / span 1;
     grid-row: 3 / span 1;
     justify-content: center;
   }
-  .article:nth-child(4) {
+  .article--four {
     grid-column: 1 / span 1;
     grid-row: 4 / span 1;
   }
