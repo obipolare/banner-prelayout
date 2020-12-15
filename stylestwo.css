@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -9,17 +10,17 @@ p {
   margin: 5px 0;
 }
 /* HEADER */
-.container {
+.main-header {
   width: 100%;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   background-color: #eee;
   position: fixed;
   top: 0;
 }
-.branding {
+.main-branding {
   margin-left: 20px;
 }
-.branding__img {
+.main-branding__img {
   display: block;
   width: 190px;
   height: 70px;
@@ -35,8 +36,7 @@ p {
 .button-show > button {
   padding: 10px 20px;
 }
-
-.nav-main {
+.main-nav {
   width: 90%;
   margin: 0 auto;
   height: 80px;
@@ -47,7 +47,6 @@ p {
 .main-menu {
   display: flex;
 }
-
 .main-menu__item {
   list-style: none;
   padding: 10px;
@@ -109,7 +108,7 @@ p {
 }
 .grid-container {
   display: grid;
-  grid-template-rows: auto auto 65px;
+  grid-template-rows: auto auto 55px;
   grid-template-columns: 50% 50%;
   padding: 50px;
   background-color: #22303a;
@@ -140,23 +139,23 @@ p {
   line-height: 21px;
   font-size: 1.05em;
 }
-.article:nth-child(1) {
+.article--one {
   align-self: flex-end;
 }
-.article:nth-child(2) {
+.article--two {
   font-family: KanitRegular;
 }
-.article:nth-child(4) {
+.article--three {
+  flex-direction: row;
+  justify-content: start;
+  display: flex;
+}
+.article--four {
   grid-column: 2 / span 1;
   grid-row: 1 / span 3;
   padding: 0;
   margin: 5px auto;
   max-width: 600px;
-}
-.article:nth-child(3) {
-  flex-direction: row;
-  justify-content: start;
-  display: flex;
 }
 .button {
   margin: 0 5px;
@@ -166,18 +165,19 @@ p {
   border-radius: 5px;
   padding: 0px 20px;
   border: none;
+  outline: none;
 }
-.button-left {
+.button--left {
   background-color: #9b7a56;
 }
-.button-right {
+.button--right {
   background-color: #22303a;
   border: 1px solid #9b7a56;
 }
-.button-right:hover {
+.button--right:hover {
   background: #9b7a56;
 }
-.link {
+.button__link {
   text-decoration: none;
   color: white;
 }
@@ -187,7 +187,6 @@ p {
     grid-template-columns: 1fr;
     padding: 26px;
   }
-
   .article,
   .button {
     align-items: center;
@@ -206,7 +205,6 @@ p {
     text-align: center;
   }
 }
-
 @media (max-width: 535px) {
   .grid-container {
     padding: 14px;
